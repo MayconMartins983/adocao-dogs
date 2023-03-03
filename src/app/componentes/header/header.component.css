@@ -1,0 +1,41 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.header i{
+    margin-right: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3aa5b6;
+    height: 64px;
+}
+
+.logo {
+    margin-left: 30px;
+    letter-spacing: 0.1em;
+}
+
+.lista {
+    display: flex;
+}
+
+.lista li a{
+    margin-right: 70px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+.lista li {
+   list-style: none;
+
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}

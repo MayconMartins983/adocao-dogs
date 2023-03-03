@@ -1,0 +1,63 @@
+
+<h1 mat-dialog-title>Adicionar dog para adoção</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="dogForm">
+
+<mat-form-field class="example-full-width">
+    <mat-label>Nome: </mat-label>
+    <input matInput formControlName="nome" name="nome">
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Raça: </mat-label>
+    <input matInput formControlName="raca" name="nome">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Idade em Meses: </mat-label>
+    <input matInput formControlName="idadeEmMeses" name="nome">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Cor: </mat-label>
+    <input matInput formControlName="cor" name="nome">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Telefone para contato: </mat-label>
+  <input matInput formControlName="telefone" name="telefone">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Nome do contato: </mat-label>
+  <input matInput formControlName="nomeDono" name="nomeDono">
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Quantidade de donos anteriores: </mat-label>
+    <input matInput formControlName="quantidadeDonos" name="nome">
+</mat-form-field>
+
+<mat-radio-group formControlName="vacinado" class="example-full-width" aria-label="Select an option">
+    <mat-label>Vacinado? </mat-label>
+    <mat-radio-button value="true">Sim</mat-radio-button>
+    <mat-radio-button value="false">Não</mat-radio-button>
+  </mat-radio-group>
+
+
+<div class="example-full-width foto">
+  <mat-label style="margin-right: 5px;">Selecione uma foto: </mat-label>
+  <input (change)="onFileSelected($event)" #fileInput type="file" id="file">
+</div>
+
+  <mat-form-field class="example-full-width" >
+    <mat-label>Descrição:  </mat-label>
+    <textarea matInput rows="5" formControlName="descricao"></textarea>
+  </mat-form-field>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="primary" (click)="salvar()">Salvar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>
