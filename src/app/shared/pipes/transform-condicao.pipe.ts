@@ -1,16 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'transformCondicao'
+  name: 'transformCondicao',
 })
 export class TransformCondicaoPipe implements PipeTransform {
-
   transform(value: unknown, ...args: unknown[]): unknown {
     if (value === true) {
-      return 'Sim'
+      return 'Sim';
     } else {
-      return "Não"
+      return 'Não';
     }
   }
-
 }

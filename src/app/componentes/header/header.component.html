@@ -1,17 +1,16 @@
-<mat-toolbar class="header mat-elevation-z5">
-    <div class="logo">
-        <a routerLink="/">
-            <i class="material-icons">
-                pets
-            </i>
-            <span>Adote um Dog</span>
-        </a>
-    </div>
+<mat-toolbar class="header mat-elevation-z5" *ngIf="logado">
+  <div class="logo">
+    <a routerLink="/">
+      <i class="material-icons"> pets </i>
+      <span>Adote um Dog</span>
+    </a>
+  </div>
 
-    <ul class="lista">
-        <li><a routerLink="/">Início</a></li>
-        <li><a routerLink="/dogs">Adote um dog</a></li>
-        <li><a routerLink="/sobre">Sobre</a></li>
-    </ul>
- 
+  <ul class="lista">
+    <li><a routerLink="/">Início</a></li>
+    <li><a routerLink="/dogs">Adote um dog</a></li>
+    <li><a routerLink="/sobre">Sobre</a></li>
+    <li><a><i class="material-icons logout" (click)="deslogar()">logout</i></a></li>
+  </ul>
+
 </mat-toolbar>

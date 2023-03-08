@@ -1,76 +1,130 @@
 <mat-toolbar>
-    <span>Adicionar um dog para adoção</span>
-    <button mat-raised-button (click)="adicionar()" style="margin-left: 20px ;"><mat-icon>add</mat-icon> Add</button>
+  <span>Adicionar um dog para adoção</span>
+  <button mat-raised-button (click)="adicionar()" style="margin-left: 20px">
+    <mat-icon>add</mat-icon> Add
+  </button>
 </mat-toolbar>
-<mat-tab-group style="padding-top: 40px; padding-left: 2%; padding-right: 2%;">
-    <mat-tab label="Para adoção">
-      <div fxLayout="row wrap" f1q  xLayoutAlign="start center" style="padding: 2%">
-        <div *ngFor="let dog of dogsNaoAdotados" style="margin: 0.5%;"  fxFlex="0 1 calc(32.3% - 11px)"
+<mat-tab-group style="padding-top: 40px; padding-left: 2%; padding-right: 2%">
+  <mat-tab label="Para adoção">
+    <div
+      fxLayout="row wrap"
+      f1q
+      xLayoutAlign="start center"
+      style="padding: 2%"
+    >
+      <div
+        *ngFor="let dog of dogsNaoAdotados"
+        style="margin: 0.5%"
+        fxFlex="0 1 calc(32.3% - 11px)"
         fxFlex.lt-md="0 1 calc(50% - 11px)"
-        fxFlex.lt-sm="100%">
-          
-          <mat-card class="mat-card-live card-custom" (click)="abrirInformacoes(dog.id)">
-  
-            <mat-card-title class="mat-card-title-live">
-              <div class="row">
-                <p>
-                  <span style="font-size:0.9rem;" fxFlex="70" fxLayoutAlign="start center">Nome: {{dog.nome}}</span>
-                  <span fxFlex></span>
-                  <mat-chip fxFlex="25" class="mat-chip-date" selected="true" fxLayoutAlign="center center">
-                    <span style="font-size:0.7rem;">Idade: {{dog.idadeEmMeses}} meses</span>
-                  </mat-chip>
-                </p>
-                <p style="font-size:0.9rem;">Raça: <span>{{dog.raca}}</span></p>
-                <p style="font-size:0.9rem;">Código: <span>{{dog.codigo}}</span></p>
-              </div>
-            </mat-card-title>
-            
-            <mat-card-content fxLayout="column" class="card-of-foto">
-              <div>
-                <img *ngIf="dog.loaded" [src]= "dog.imageSrc"  class="img">
-              </div>
-              <div class="descricao">
-                <p> <strong>Descrição:</strong> {{ dog.descricao }}</p>
-              </div>
-            </mat-card-content>
-            <!-- <mat-card-actions style="margin:1px;padding-bottom:5px; padding-top: 5px;">
+        fxFlex.lt-sm="100%"
+      >
+        <mat-card
+          class="mat-card-live card-custom"
+          (click)="abrirInformacoes(dog.codigo)"
+        >
+          <mat-card-title class="mat-card-title-live">
+            <div class="row">
+              <p>
+                <span
+                  style="font-size: 0.9rem"
+                  fxFlex="70"
+                  fxLayoutAlign="start center"
+                  >Nome: {{ dog.nome }}</span
+                >
+                <span fxFlex></span>
+                <mat-chip
+                  fxFlex="25"
+                  class="mat-chip-date"
+                  selected="true"
+                  fxLayoutAlign="center center"
+                >
+                  <span style="font-size: 0.7rem"
+                    >Idade: {{ dog.idadeEmMeses }} meses</span
+                  >
+                </mat-chip>
+              </p>
+              <p style="font-size: 0.9rem">
+                Raça: <span>{{ dog.raca }}</span>
+              </p>
+              <p style="font-size: 0.9rem">
+                Código: <span>{{ dog.codigo }}</span>
+              </p>
+            </div>
+          </mat-card-title>
+
+          <mat-card-content fxLayout="column" class="card-of-foto">
+            <div>
+              <img *ngIf="dog.loaded" [src]="dog.imageSrc" class="img" />
+            </div>
+            <div class="descricao">
+              <p><strong>Descrição:</strong> {{ dog.descricao }}</p>
+            </div>
+          </mat-card-content>
+          <!-- <mat-card-actions style="margin:1px;padding-bottom:5px; padding-top: 5px;">
             </mat-card-actions> -->
-          </mat-card>
-        </div>
+        </mat-card>
       </div>
-    </mat-tab>
-  
-    <mat-tab label="Já adotados">
-        <div fxLayout="row wrap" f1q  xLayoutAlign="start center" style="padding: 2%">
-          <div *ngFor="let dog of dogsAdotados" style="margin: 0.5%;"  fxFlex="0 1 calc(32.3% - 11px)"
-          fxFlex.lt-md="0 1 calc(50% - 11px)"
-          fxFlex.lt-sm="100%">
-            
-            <mat-card class="mat-card-live card-custom" (click)="abrirInformacoes(dog.id)">
-    
-              <mat-card-title class="mat-card-title-live">
-                <div class="row">
-                  <p>
-                    <span style="font-size:0.9rem;" fxFlex="70" fxLayoutAlign="start center">Nome: {{dog.nome}}</span>
-                    
-                    <mat-chip fxFlex="25" class="mat-chip-date" selected="true" fxLayoutAlign="center center">
-                      <span style="font-size:0.7rem;">Idade: {{ dog.idadeEmMeses }}meses</span>
-                    </mat-chip>
-                  </p>
-                  <p style="font-size:0.9rem;">Raça: <span>{{dog.raca}}</span></p>
-                  <p style="font-size:0.9rem;">Código: <span>{{dog.codigo}}</span></p>              
-                </div>
-              </mat-card-title>
-              
-              <mat-card-content fxLayout="column" class="card-of-foto">
-                <div>
-                  <img src="assets/dog.jpg" alt="" class="img">
-                </div>
-              </mat-card-content>
-              <!-- <mat-card-actions style="margin:1px;padding-bottom:5px; padding-top: 5px;">
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Já adotados">
+    <div
+      fxLayout="row wrap"
+      f1q
+      xLayoutAlign="start center"
+      style="padding: 2%"
+    >
+      <div
+        *ngFor="let dog of dogsAdotados"
+        style="margin: 0.5%"
+        fxFlex="0 1 calc(32.3% - 11px)"
+        fxFlex.lt-md="0 1 calc(50% - 11px)"
+        fxFlex.lt-sm="100%"
+      >
+        <mat-card
+          class="mat-card-live card-custom"
+          (click)="abrirInformacoes(dog.codigo)"
+        >
+          <mat-card-title class="mat-card-title-live">
+            <div class="row">
+              <p>
+                <span
+                  style="font-size: 0.9rem"
+                  fxFlex="70"
+                  fxLayoutAlign="start center"
+                  >Nome: {{ dog.nome }}</span
+                >
+
+                <mat-chip
+                  fxFlex="25"
+                  class="mat-chip-date"
+                  selected="true"
+                  fxLayoutAlign="center center"
+                >
+                  <span style="font-size: 0.7rem"
+                    >Idade: {{ dog.idadeEmMeses }}meses</span
+                  >
+                </mat-chip>
+              </p>
+              <p style="font-size: 0.9rem">
+                Raça: <span>{{ dog.raca }}</span>
+              </p>
+              <p style="font-size: 0.9rem">
+                Código: <span>{{ dog.codigo }}</span>
+              </p>
+            </div>
+          </mat-card-title>
+
+          <mat-card-content fxLayout="column" class="card-of-foto">
+            <div>
+              <img *ngIf="dog.loaded" [src]="dog.imageSrc" class="img" />
+            </div>
+          </mat-card-content>
+          <!-- <mat-card-actions style="margin:1px;padding-bottom:5px; padding-top: 5px;">
               </mat-card-actions> -->
-            </mat-card>
-          </div>
-        </div>
-      </mat-tab>
-  </mat-tab-group>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

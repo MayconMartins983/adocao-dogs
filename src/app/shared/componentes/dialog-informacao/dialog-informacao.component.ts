@@ -1,29 +1,18 @@
-import { Dog } from './../../dog';
+import { Dog } from '../../models/dog';
 import { Component, Input, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-informacao',
   templateUrl: './dialog-informacao.component.html',
-  styleUrls: ['./dialog-informacao.component.css']
+  styleUrls: ['./dialog-informacao.component.css'],
 })
-export class DialogInformacaoComponent implements OnInit{
+export class DialogInformacaoComponent implements OnInit {
+  @Input() dogEspecifico!: Dog;
 
-  @Input() dogEspecifico!: Dog
-
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: Dog) {
     this.dogEspecifico = data;
   }
-
-
-
-
-
-
-
-
 }

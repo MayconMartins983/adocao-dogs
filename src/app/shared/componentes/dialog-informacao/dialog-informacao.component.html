@@ -1,16 +1,22 @@
 <div mat-dialog-content class="conteiner">
-      <h1>Dados do Animal</h1>
-      <p><strong>Nome: </strong>{{ dogEspecifico.nome }}</p>
-      <p><strong>Raca: </strong>{{ dogEspecifico.raca }}</p>
-      <p><strong>Idade em meses: </strong>{{ dogEspecifico.idadeEmMeses }}</p>
-      <p><strong>Cor: </strong>{{ dogEspecifico.cor }}</p>
-      <p><strong>Possui vacinação: </strong>{{ dogEspecifico.vacinado | transformCondicao}}</p>
-      <p><strong>Quantida de Donos que ja possuiu: </strong>{{ dogEspecifico.quantidadeDonos }}</p>
-      <p><strong>Telefone: </strong>{{ dogEspecifico.telefone }}</p>
-      <p><strong>NomeDono: </strong>{{ dogEspecifico.nomeDono }}</p>
-      <p><strong>Descricao: </strong>{{ dogEspecifico.descricao }}</p>
+  <h1>Dados do Animal</h1>
+  <p><strong>Nome: </strong>{{ dogEspecifico.nome }}</p>
+  <p><strong>Raca: </strong>{{ dogEspecifico.raca }}</p>
+  <p><strong>Idade em meses: </strong>{{ dogEspecifico.idadeEmMeses }}</p>
+  <p><strong>Cor: </strong>{{ dogEspecifico.cor }}</p>
+  <p>
+    <strong>Possui vacinação: </strong>{{ dogEspecifico.vacinado | transformCondicao }}
+  </p>
+  <p>
+    <strong>Quantida de Donos que ja possuiu: </strong>{{ dogEspecifico.quantidadeDonos }}
+  </p>
+  <p><strong>Telefone: </strong>{{ dogEspecifico.telefone }}</p>
+  <p><strong>NomeDono: </strong>{{ dogEspecifico.nomeDono }}</p>
+  <p><strong>Descricao: </strong>{{ dogEspecifico.descricao }}</p>
 </div>
 
 <div mat-dialog-actions class="conteiner">
-<button mat-button mat-dialog-close cdkFocusInitial color="primary">Ok</button>
+  <button mat-button mat-dialog-close cdkFocusInitial color="primary">
+    Ok
+  </button>
 </div>

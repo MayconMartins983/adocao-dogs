@@ -11,9 +11,9 @@ export class AppComponent implements OnInit{
   constructor(private matDialog: MatDialog){}
 
   ngOnInit(): void {
-    this.matDialog.open(DialogConfirmationComponent, {
-      width: '50%'
-    })
+    // this.matDialog.open(DialogConfirmationComponent, {
+    //   width: '50%'
+    // })
   }
   title = 'dog-adocao';
 }

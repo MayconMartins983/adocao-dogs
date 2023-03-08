@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="left">
+    <h2>Bem-Vindo ao nosso site de adoção de cachorros</h2>
+    <button type="submit">Cadastre-se</button>
+  </div>
+  <div class="right">
+    <h2>Faça login</h2>
+    <form [formGroup]="loginForm">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        formControlName="email"
+        name="email"
+      />
+      <label for="password">Senha</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="senha"
+        name="senha"
+      />
+      <button type="submit" (click)="login()">Entrar</button>
+    </form>
+  </div>
+</div>

@@ -1,23 +1,22 @@
-
 .mat-mdc-radio-button ~ .mat-mdc-radio-button {
-    margin-left: 16px;
-  }
+  margin-left: 16px;
+}
 
-  .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-    margin: 2px 0;
-  }
-  
-  .show-message {
-    background-color: aqua;
-  }
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
 
-  .foto {
-    margin: 15px 0;
-  }
+.example-full-width {
+  width: 100%;
+  margin: 2px 0;
+}
+
+.show-message {
+  background-color: aqua;
+}
+
+.foto {
+  margin: 15px 0;
+}
